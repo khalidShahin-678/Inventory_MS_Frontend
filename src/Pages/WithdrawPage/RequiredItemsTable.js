@@ -4,7 +4,7 @@ function RequiredItemsTable({ items }) {
         <table>
             <thead>
                 <tr>
-                    <th className={Styles.itemName}>الصنف</th>
+                    <th className={Styles.itemName}>اسم الصنف</th>
                     <th className={Styles.itemQ}>الكمية</th>
                 </tr>
             </thead>

@@ -3,8 +3,9 @@
     color: #fff;
 
     min-width: 260px;
-    height: 100vh;
-    max-height: 100vh;
+    /* height: 100vh; */
+    min-height: 100vh;
+    /* max-height: 130vh; */
 
     padding: 16px;
 

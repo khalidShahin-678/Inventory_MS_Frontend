@@ -29,12 +29,23 @@
 .search input {
     box-sizing: border-box;
     height: 44px;
-    width: 100%;
+    width: 66%;
     border-radius: 8px;
     border: solid 2px #334155b9;
     padding: 4px 12px;
     font-size: 16px;
     font-weight: 600;
+}
+
+.search select {
+    height: 44px;
+    width:15% ;
+    border-radius: 8px;
+    border: solid 2px #334155b9;
+    padding: 4px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 2%;
 }
 
 
@@ -51,7 +62,7 @@
     border-radius: 14px;
     background-color: #fff;
     box-shadow: 0 8px 24px rgb(15 23 42 / 5%);
-
+    min-height: 90vh;
     max-height: 90vh;
     overflow-y: auto;
     scrollbar-width: thin;
@@ -68,6 +79,33 @@
 
 .withdrawnItems {
     flex: 1;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: center; 
+    position: relative;
+}
+.withdrawnItems button {
+    width: 100%;
+    min-height: 44px;
+
+    border-radius: 8px;
+    border: none;
+    padding: 4px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #2563EB;
+    color: white;
+    cursor: pointer;
+
+    margin-top: auto;
+    position: sticky;
+    bottom: 0px;
+}
+
+.withdrawnItems button:hover {
+    transform: translateY(-1px);
 }
 
 .itemsTableWrapper table,
@@ -102,7 +140,7 @@
     border-bottom: 1px solid #ddd;
     font-size: 14px;
     overflow-wrap: anywhere;
-
+    max-height: 44px;
 }
 
 .itemsTableWrapper tbody tr:last-child td,

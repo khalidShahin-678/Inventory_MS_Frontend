@@ -1,4 +1,3 @@
-import { act, useState } from 'react'
 //  Icons
 import BoxesIcon from './assets/boxes.svg';
 import withdrawPageIcon from './assets/box.svg';

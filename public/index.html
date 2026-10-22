@@ -8,5 +8,30 @@
 </head>
 <body>
     <div id="root"></div>
+    <script>
+        let scannerInputLock = false;
+        let bufferInput = "";
+        document.addEventListener("keydown",(event)=>{
+            if(event.key === "F12"){
+                event.preventDefault();
+                document.activeElement.blur();
+                scannerInputLock = true;
+                bufferInput = "" ;
+            }
+            else if (event.key === "Enter"){
+
+                const barcodeInput = document.getElementById('barcode');
+                if(barcodeInput)barcodeInput.value = bufferInput;
+                scannerInputLock = false;
+                bufferInput = "";
+            }
+            else {
+                if(scannerInputLock === true){
+                    bufferInput += event.key;
+                }
+            }
+            console.log(bufferInput);
+        })
+    </script>
 </body>
 </html>

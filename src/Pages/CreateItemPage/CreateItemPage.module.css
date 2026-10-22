@@ -77,6 +77,8 @@
     font-weight: 700;
     cursor: pointer;
     transition: background-color 150ms ease, transform 150ms ease;
+    position: relative;
+    
 }
 
 .formWrapper button:hover {
@@ -95,5 +97,44 @@
 
     .title {
         font-size: 21px;
+    }
+}
+
+
+.formWrapper button.success::after {
+    content: "👍";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    background-color: green;
+    height: 46px;
+    width: 100px;
+    position: absolute;
+    left: -28px;
+    top: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    z-index: -1;
+    animation: itemCreated linear 1.6s 1;   
+
+}
+
+/*  Small animation */
+
+@keyframes itemCreated {
+    0% {
+        left: -28px;
+    }
+
+    30%{
+        left: -128px;
+    }
+
+    70% {
+        left: -128px;
+    }
+    100% {
+        left: -28px;
     }
 }
